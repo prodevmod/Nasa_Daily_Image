@@ -5,84 +5,56 @@ body {
     background: #000000;
     color: #ffffff; 
     font-family: sans-serif;
-}
-
-body::before,
-body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
     height: 100%;
-    background: #4400ff;
-    z-index: -1; 
-}
-
-/* LEFT SIDEBAR: Straight on the left (0%), zigzag on the right (100% and 85%) */
-body::before { 
-    left: 0; 
-    clip-path: polygon(
-        0% 0%,       /* Top-left */
-        100% 0%,     /* Top-right start */
-        85% 10%,    /* Inward */
-        100% 20%,    /* Outward */
-        85% 30%,    /* Inward */
-        100% 40%,    /* Outward */
-        85% 50%,    /* Inward */
-        100% 60%,    /* Outward */
-        85% 70%,    /* Inward */
-        100% 80%,    /* Outward */
-        85% 90%,    /* Inward */
-        100% 100%,   /* Bottom-right */
-        0% 100%      /* Bottom-left closes the shape */
+    background-color: rgb(0, 0, 0);
+    background-image: radial-gradient(
+        500px circle at var(--x,50%) var(--y,50%),
+    rgba(140, 0, 255, 0.35) 0%, 
+    rgba(173, 95, 245, 0.03) 50%, 
+    rgba(32, 7, 90, 0) 100%
     );
-}
-
-/* RIGHT SIDEBAR: Straight on the right (100%), zigzag on the left (0% and 15%) */
-body::after { 
-    right: 0; 
-    clip-path: polygon(
-        100% 0%,     /* Top-right */
-        0% 0%,       /* Top-left start */
-        15% 10%,     /* Inward */
-        0% 20%,      /* Outward */
-        15% 30%,     /* Inward */
-        0% 40%,      /* Outward */
-        15% 50%,     /* Inward */
-        0% 60%,      /* Outward */
-        15% 70%,     /* Inward */
-        0% 80%,      /* Outward */
-        15% 90%,     /* Inward */
-        0% 100%,     /* Bottom-left */
-        100% 100%    /* Bottom-right closes the shape */
-    );
+     background-attachment: fixed;
+    background-repeat: no-repeat; 
 }
 
 #app {
     margin: 0 auto;
     padding: 0.24em; 
     text-align: center;
+    width: 100%;
 }
 img,video{
     max-width: 100%;
     margin: 1rem 0;
 }
 
-p {
-    font-size: 1.4rem;
-  font-family: "Honk", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
+
+#title {
+    font-size: 1.8rem;
+          font-size: 40px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+    font-variation-settings:
     "MORF" 15,
     "SHLN" 50;
-    max-width: 100%;
-text-align: center;
+    text-shadow: 0 0 10px #8c00ff, 0 0 12px #be79ff, 0 0 30px #1f0338;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  border-radius: 50px;
 }
-h1 {
-    font-size: 1.8rem;
-  font-family: "Akronim", system-ui;
+
+#desc {
+    font-size: 1.4rem;
+  font-family: "Syncopate", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
@@ -93,4 +65,57 @@ h1 {
   body::after {
     display: none;
   }
+}
+.basic_data{
+    padding: 10px 15px; 
+    border: 2px solid #7700ff;
+    box-shadow: 0 0 4px #8c00ff, 0 0 12px #d29bff, 0 0 30px #9169fd;
+    border-radius: 15px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(0, 0, 0); 
+    width: 50%;
+    margin: 1rem auto;
+    box-sizing: border-box
+}
+
+.loading{
+        font-size: 40px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+    max-width: 100%;
+    text-align: center;
+    border: 2px solid #7700ff;
+    box-shadow: 0 0 4px #8c00ff, 0 0 12px #d29bff, 0 0 30px #9169fd;
+    border-radius: 15px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(0, 0, 0); 
+    width: 50%;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.subtitles {
+    color: #ffffff70;
+    font-size: 10px;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    
+
+    animation: continuousPulse 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes continuousPulse {
+    from {
+        opacity: 0.2; 
+    }
+    to {
+        opacity: 1;  
+    }
 }
