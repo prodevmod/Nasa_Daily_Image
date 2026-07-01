@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    background: #000000;
+    color: #ffffff; 
+    font-family: sans-serif;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    background: #4400ff;
+    z-index: -1; 
+}
+
+/* LEFT SIDEBAR: Straight on the left (0%), zigzag on the right (100% and 85%) */
+body::before { 
+    left: 0; 
+    clip-path: polygon(
+        0% 0%,       /* Top-left */
+        100% 0%,     /* Top-right start */
+        85% 10%,    /* Inward */
+        100% 20%,    /* Outward */
+        85% 30%,    /* Inward */
+        100% 40%,    /* Outward */
+        85% 50%,    /* Inward */
+        100% 60%,    /* Outward */
+        85% 70%,    /* Inward */
+        100% 80%,    /* Outward */
+        85% 90%,    /* Inward */
+        100% 100%,   /* Bottom-right */
+        0% 100%      /* Bottom-left closes the shape */
+    );
+}
+
+/* RIGHT SIDEBAR: Straight on the right (100%), zigzag on the left (0% and 15%) */
+body::after { 
+    right: 0; 
+    clip-path: polygon(
+        100% 0%,     /* Top-right */
+        0% 0%,       /* Top-left start */
+        15% 10%,     /* Inward */
+        0% 20%,      /* Outward */
+        15% 30%,     /* Inward */
+        0% 40%,      /* Outward */
+        15% 50%,     /* Inward */
+        0% 60%,      /* Outward */
+        15% 70%,     /* Inward */
+        0% 80%,      /* Outward */
+        15% 90%,     /* Inward */
+        0% 100%,     /* Bottom-left */
+        100% 100%    /* Bottom-right closes the shape */
+    );
+}
+
+#app {
+    padding: 0 100px; 
+    align-items: center;
+}
+img,video{
+    max-width: 100%;
+    margin: 1rem 0;
+    align-self: center;
+}
+
+p {
+    font-size: 30px;
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+text-align: center;
+}
+h1 {
+    font-size: 40px;
+  font-family: "Akronim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
