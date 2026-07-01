@@ -2,7 +2,9 @@
 This is a product of the stardance's program "Give Your Website a Pulse" mission.It is a vite powered website that displays the days nasa's image of the day along with a title and a description, utilising the NASA free personalised API token.
 
 ## What I Made
-<img width="1915" height="944" alt="image" src="https://github.com/user-attachments/assets/ee1fba7c-d8aa-457c-a9dd-d0d36be76f69" />
+<img width="1900" height="935" alt="image" src="https://github.com/user-attachments/assets/993acaf8-b7f2-48b7-91e5-e90b4906e55e" />
+<img width="1898" height="927" alt="image" src="https://github.com/user-attachments/assets/798aa0ef-9ca0-4f19-a2b4-d657b835db4b" />
+
 I made a website using HTML,CSS a little bit of JS, Vite and the Nasa API which shows you nasa's image of the day along with a title and it's description.
 
 ## What I Learned
