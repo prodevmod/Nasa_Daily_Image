@@ -69,7 +69,7 @@ img,video{
 }
 
 p {
-    font-size: 1.8rem;
+    font-size: 0.95rem;
   font-family: "Honk", system-ui;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -81,7 +81,7 @@ p {
 text-align: center;
 }
 h1 {
-    font-size: 0.95rem;
+    font-size: 1.8rem;
   font-family: "Akronim", system-ui;
   font-weight: 400;
   font-style: normal;
