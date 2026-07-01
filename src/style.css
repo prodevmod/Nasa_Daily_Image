@@ -59,17 +59,17 @@ body::after {
 }
 
 #app {
-    padding: 0 100px; 
-    align-items: center;
+    margin: 0 auto;
+    padding: 0.24em; 
+    text-align: center;
 }
 img,video{
     max-width: 100%;
     margin: 1rem 0;
-    align-self: center;
 }
 
 p {
-    font-size: 30px;
+    font-size: 1.8rem;
   font-family: "Honk", system-ui;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -77,12 +77,20 @@ p {
   font-variation-settings:
     "MORF" 15,
     "SHLN" 50;
+    max-width: 100%;
 text-align: center;
 }
 h1 {
-    font-size: 40px;
+    font-size: 0.95rem;
   font-family: "Akronim", system-ui;
   font-weight: 400;
   font-style: normal;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  body::before,
+  body::after {
+    display: none;
+  }
 }
